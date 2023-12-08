@@ -123,3 +123,19 @@ this.alert("Hello");
 product.showPrice();
 product.applyDiscount(15);
 product.showPrice();
+
+// ------------- simple class
+class Product {
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    show() {
+        console.log(this.name);
+    }
+}
+
+let pr1 = new Product("iPhone", 1000);
+let pr2 = new Product("iPhone", 1000);
+let pr3 = new Product("iPhone", 1000);
