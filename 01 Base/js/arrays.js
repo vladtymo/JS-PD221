@@ -85,6 +85,7 @@ function isNegative(n) {
     return n < 0;
 }
 
+// predicate - function that returns boolean type
 console.log("Found:", array.find(isNegative));
 console.log("Found:", array.find(function (n) { return n < 0; }));
 console.log("Found:", array.find((n) => n < 0));
