@@ -31,6 +31,8 @@ class Product {
     // metbods
     show() {
         console.log(`Product: ${this.name}, ${this.#price}$`);
+        alert(`Hello: ${this.name}`);
+        alert(this.name);
     }
     showStatus() {
         console.log(`${this.name} is ${this.inStock ? 'in stock' : 'out of stock'}!`);
@@ -67,8 +69,6 @@ class Product {
 }
 
 let pr1 = new Product("iPhone X", 434, 4);
-let pr2 = new Product("iPhone X", 434, 4);
-let pr3 = new Product("iPhone X", 434, 4);
 
 console.log("Product count:", Product.count);
 
@@ -148,3 +148,13 @@ function showProduct(item) {
 
 showProduct(my);        // polymorphism
 showProduct(myMonitor); // polymorphism
+
+// ----------- change this context
+my.showStatus();
+
+// issue - this will be changes in setTimeout func
+setTimeout(() => my.showStatus(), 1000);
+
+// fix the issue
+setTimeout(() => my.showStatus(), 1000);
+setTimeout(my.showStatus.bind(my), 2000);
