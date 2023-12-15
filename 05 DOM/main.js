@@ -80,6 +80,16 @@ newItem.onclick = () => {
     newItem.textContent += "!";
 }
 
+newItem.addEventListener('click', () => {
+    console.log("First handler");
+});
+
+function secondHandler() {
+    console.log("Second handler");
+};
+newItem.addEventListener('click', secondHandler);
+newItem.removeEventListener('click', secondHandler);
+
 Array.from(list.children).forEach((li) => {
     li.onmouseenter = () => {
         li.classList.add('highlight');
@@ -112,3 +122,8 @@ console.log("Next sibling element:", secondItem.nextElementSibling); // include 
 console.log("Previous sibling element:", secondItem.previousElementSibling); // include elements only
 
 console.log('Parent item:', secondItem.parentNode);
+
+// ------ most usefull methods
+// search: querySelector(), querySelectorAll()
+// add content: innerHTML, append()
+// remove: remove()
