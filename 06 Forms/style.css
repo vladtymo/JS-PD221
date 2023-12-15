@@ -1,0 +1,35 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    background-color: rgb(102, 102, 102);
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+
+.mt {
+    margin-top: 4px;
+}
+
+table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table thead {
+    background-color: rgb(100, 100, 100);
+    color: white;
+}
+
+table th {
+    text-align: left;
+}
+
+table th, table td {
+    padding: 6px;
+}
