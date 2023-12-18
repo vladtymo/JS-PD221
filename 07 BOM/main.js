@@ -31,8 +31,8 @@ screen.orientation.onchange = () => {
 console.log(location);
 
 w3schoolBtn.onclick = () => {
-    location.assign("https://w3schools.com"); // save history
-    //location.replace("https://w3schools.com"); // remove history
+    //location.assign("https://w3schools.com"); // save history
+    location.replace("https://w3schools.com"); // remove history
 }
 
 // --------- navigator
@@ -43,4 +43,4 @@ console.log(navigator.geolocation);
 
 navigator.geolocation.getCurrentPosition((res) => {
     console.log(`My location: ${res.coords.latitude} : ${res.coords.longitude}`);
-}, () => console.log("Cannot get your location!"));
+}, () => console.warn("Cannot get your location!"));
