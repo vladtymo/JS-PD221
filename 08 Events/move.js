@@ -32,6 +32,8 @@ const moveData = {
 // keydown
 window.onkeydown = (event) => {
 
+    console.log("bla");
+
     switch (event.keyCode) {
         case moveData.lCode:
             moveData.moveLeft();
