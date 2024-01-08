@@ -210,3 +210,6 @@ Object.defineProperty(collection, append_key, {
 
 console.log(collection.append_key);
 collection[append_key](455);
+
+// get iterator of the element
+// element[Symbol.iterator]
