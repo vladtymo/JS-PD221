@@ -168,10 +168,10 @@ const admin1 = {
 };
 
 let admin2 = {
+    // login: admin1.login,
     // password: admin1.password,
     // role: admin1.role,
     ...admin1,
-    login: admin1.login,
     email: 'new@gmail.com', // overwrite email value
     address: 'Rivne, Ukraine' // create new property
 };
@@ -182,34 +182,33 @@ console.log(Object.values(admin2));
 
 // ------------------ Symbol ------------------
 let myId = Symbol("123");
-let yourId = Symbol("456");
+let yourId = Symbol("123");
 
 console.log(myId == yourId); // false
 
-myId = Symbol.for("123");
-yourId = Symbol.for("123");
+myId = Symbol.for("123");   // create globally
+yourId = Symbol.for("123"); // using existing global object
 
 console.log(myId == yourId); // true
-
-yourId = Symbol("123");
-console.log(myId == yourId); // false
 
 yourId = myId;
 console.log(myId == yourId); // true
 
+let data_key = Symbol(56478389);
+
 const collection = {
     length: 10,
-    data: [1, 5, 7, 10]
+    [data_key]: [1, 5, 7, 10]
 }
 
-let append_key = Symbol("append");
-Object.defineProperty(collection, append_key, {
-    enumerable: false,
-    value: function (item) { this.data.push(item); }
-});
+console.log(collection.data_key);           // undefined
+console.log(collection[Symbol(56478389)]);  // undefined
+console.log(collection[data_key]);          // [...]
 
-console.log(collection.append_key);
-collection[append_key](455);
+// Object.defineProperty(collection, data_key, {
+//     enumerable: false,
+//     value: [1, 5, 7, 10]
+// });
 
 // get iterator of the element
-// element[Symbol.iterator]
+// list[Symbol.iterator]
