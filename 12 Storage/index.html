@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <h1>Working with Local Storage</h1>
+    <p></p>
+
+    <script>
+        const key = "data-key";
+        // JSON.stringify() - convert object to JSON string
+        // JSON.parse() - convert JSON string to object
+
+        // --- load data ---
+        let numbers = null;
+
+        if (localStorage.getItem(key) == null)
+            numbers = [1, 2, 3];
+        else
+            numbers = JSON.parse(localStorage.getItem(key));
+
+        // ... application logic ...
+        numbers.push(+prompt("Enter number:"));
+
+        const p = document.querySelector('p');
+        p.innerHTML += numbers;
+
+        // --- save data ---
+        localStorage.setItem(key, JSON.stringify(numbers));
+    </script>
+</body>
+
+</html>
