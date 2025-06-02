@@ -14,7 +14,7 @@ let login = "hello_js";             // string
 let name = 'My name is "Vlad"';     // string
 let letter = 'A';                   // string
 
-let undefVar;                       // undefined
+let undefVar = undefined;           // undefined
 let activeUser = null;              // null
 
 let user = { id: 3344, login: "vladdd" }; // object

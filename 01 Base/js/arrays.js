@@ -29,20 +29,20 @@ console.log("Array: " + array);
 
 console.log(`Array lenght: ${array.length}`);
 
-// for (let i = 0; i < array.length; i++) {
-//     console.log(`Element[${i}]: ${array[i]}`);
-// }
+for (let i = 0; i < array.length; i++) {
+    console.log(`Element[${i}]: ${array[i]}`);
+}
 
 // // ignore undefined elements
-// array.forEach((elem, ind) => {
-//     console.log(`Element[${ind}]: ${elem}`);
-// });
+array.forEach((elem, ind) => {
+    console.log(`Element[${ind}]: ${elem}`);
+});
 
-// console.log("for in");
-// // iterate over keys: 0, 1, 2, 3, 4...
-// for (const key in array) {
-//     console.log(key);
-// }
+console.log("for in");
+// iterate over keys: 0, 1, 2, 3, 4...
+for (const key in array) {
+    console.log(key);
+}
 
 // let user = {
 //     id: 1200,
@@ -57,11 +57,11 @@ console.log(`Array lenght: ${array.length}`);
 //     console.log(" - ", user[property]);
 // }
 
-// console.log("for of");
-// // iterate over values: 3, -5, 123, 44...
-// for (const value of array) {
-//     console.log(value);
-// }
+console.log("for of");
+// iterate over values: 3, -5, 123, 44...
+for (const value of array) {
+    console.log(value);
+}
 
 // // -=-=-=-=-=-=- Array Methods -=-=-=-=-=-=-
 console.log("Original Array: ", array);
@@ -101,7 +101,7 @@ console.log("Sorted by default:", array);
 array.sort((a, b) => a - b);
 console.log("Sorted with custom func:", array);
 
-const copy = array.slice(1, array.length - 1);
+const copy = array.slice(1, 5);
 console.log("Copied array:", copy);
 
 array.splice(2, 3); // 3 element from index 2
